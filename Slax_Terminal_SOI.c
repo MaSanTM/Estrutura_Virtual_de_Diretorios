@@ -9,7 +9,7 @@
 #define TAMANHO_NOME 8
 #define DEBUG 0
 
-int parent[ENTRADAS_MAX];
+int  parent[ENTRADAS_MAX];
 char nome[ENTRADAS_MAX ][TAMANHO_NOME];
 char data[ENTRADAS_MAX][10];
 char hora[ENTRADAS_MAX][10];
@@ -266,7 +266,7 @@ int main() {
 
     while (strcmp(comando,"poweroff") != 0) {
 
-        printf("user~# ");
+        printf("> ");
         gets(linha_de_comando);
 
         comando = strtok(linha_de_comando," ");
