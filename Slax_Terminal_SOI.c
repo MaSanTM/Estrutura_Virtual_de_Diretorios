@@ -354,7 +354,7 @@ int content() {
             printf("\n clear - Limpa a tela.");
             printf("\n local - Mostra os diretorios existesntes e seus enderecos.");   
             printf("\n copyright - Exibe o nome dos autores do programa.");
-            printf("\n poweroff - Sai do terminal.");
+            printf("\n poweroff - Sai do terminal.\n\n");
 
             executei_comando = 1;
         }
