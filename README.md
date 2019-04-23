@@ -11,7 +11,7 @@ poweroff - Sai do terminal<br/>
 cp - Copia um arquivo de um diretório para outro<br/>
 clear - Limpa a tela<br/>
 
-![alt text](http://url/to/img.png)
+![alt text](http://www.fatec.edu.br/wp-content/themes/fatec/img/logo-colorido.png)
 
 
 Criador da base do código: <link>https://github.com/parklez<link/>
