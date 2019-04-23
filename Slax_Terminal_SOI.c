@@ -332,11 +332,12 @@ int main() {
 
             printf(" pwd - Exibe a posicao na estrutura de diretorios\n");
             printf("\n mkdir - Cria um diretorio\n");
+            printf("\n rmdir - Exclui um diretorio\n");
             printf("\n cd - Chama o diretorio\n");
             printf("\n ren - Renomeia um diretorio\n");
             printf("\n copyright - Exibe o nome dos autores do programa\n");
             printf("\n poweroff - Sai do terminal\n");
-            printf("\n time - Exbe data e horas atuais\n");
+            printf("\n time - Exibe data e horas atuais\n");
             printf("\n clear - Limpa a tela\n\n");
             executei_comando = 1;
         }
