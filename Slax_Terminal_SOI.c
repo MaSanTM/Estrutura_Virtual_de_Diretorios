@@ -28,7 +28,6 @@ void data_hora() {
     sprintf(horalocal, "%d:%d:%d", data_atual.tm_hour, data_atual.tm_min, data_atual.tm_sec);
     sprintf(datalocal, "%d/%d/%d", data_atual.tm_mday, data_atual.tm_mon + 1, data_atual.tm_year + 1900);
 }
-
 void mkdir(char *nomedir) {
 
     int i = 0;
@@ -39,12 +38,10 @@ void mkdir(char *nomedir) {
         printf(" Coloque um nome.\n");
         return;
     }
-
     if (strlen(nomedir) > 8) {
 
         printf(" Maximo de 8 letras no nome.\n");
     }
-
     for (i = 0; i < ENTRADAS_MAX; i++) {
 
         if (parent[i] == posicao_atual) {
@@ -57,7 +54,6 @@ void mkdir(char *nomedir) {
             }
         }
     }
-
     if (existe == 0) {
 
         codigo++;
@@ -70,14 +66,12 @@ void mkdir(char *nomedir) {
         strcpy(hora[codigo], horalocal);
     }
 }
-
 void rmdir(char *nomedir) {
 
     if(nomedir == NULL) {
 
         printf(" Insira o nome do arquivo a ser excluido.\n");
     }
-
     int positivo = 0;
     int i = 0;
     int j = 0;
@@ -93,13 +87,11 @@ void rmdir(char *nomedir) {
             }
         }
     }
-
     if (positivo == 0) {
 
         printf(" O diretorio nao existe.\n");
         return;
     }
-
     for (j = 0; j < ENTRADAS_MAX; j++) {
 
     if (parent[j] == posicao_atual) {
@@ -110,7 +102,6 @@ void rmdir(char *nomedir) {
             return;
         }
     }
-
         if (positivo == 1) {
 
             parent[i] = 0;
@@ -120,19 +111,16 @@ void rmdir(char *nomedir) {
         }
     }
 }
-
 void ren(char *antigo, char *novo) {
 
     if(antigo == NULL || novo == NULL) {
 
         printf(" Insira o nome do arquivo e o novo nome.\n");
     }
-
     if (strlen(novo) > 8) {
 
         printf(" Maximo de 8 letras no nome.\n");
     }
-
     int positivo = 0;
     int i = 0;
     int j = 0;
@@ -141,23 +129,21 @@ void ren(char *antigo, char *novo) {
     for (i = 0; i < ENTRADAS_MAX; i++) {
 
         if (parent[i] == posicao_atual) {
-
+            
             if (strcmp(antigo, nome[i]) == 0) {
 
                 positivo = 1;
                 local = i;
             }
-
             if (strcmp(novo, nome[i]) == 0) {
-
+ 
                 printf(" Ja existe um diretorio neste endereco com o mesmo nome.\n");
                 return;
             }
         }
     }
-
     if (positivo == 0) {
-
+        
         printf(" O diretorio nao existe.\n");
         return;
     }
@@ -167,7 +153,6 @@ void ren(char *antigo, char *novo) {
         strcpy(nome[local], novo);
     }
 }
-
 void pwd() {
 
     int posicao = posicao_atual;
@@ -178,7 +163,6 @@ void pwd() {
         printf("%s\n", nome[0]);
         return;
     }
-
     while (posicao > 0) {
 
         vetor[i] = posicao;
@@ -187,19 +171,16 @@ void pwd() {
 
         i++;
     }
-
     i--;
 
     for (; i >= 0; i--) {
 
         printf("/%s", nome[vetor[i]]);
-
     }
     printf("\n");
 
     return;
 }
-
  void cd(char *parametro) {
 
     int i = 0;
@@ -209,7 +190,6 @@ void pwd() {
         printf(" Digite um caminho valido. ou ' -- ' para voltar ou '..' para ir a pasta raiz.\n");
         return;
     }
-
     if (strcmp(parametro, "--") == 0) {
 
         if (posicao_atual == 0) {
@@ -218,12 +198,10 @@ void pwd() {
             printf("\n");
         }
         else {
-
             posicao_atual = parent[posicao_atual];
         }
         return;
     }
-
     int positivo = 0;
 
     for (i = 0; i < ENTRADAS_MAX; i++) {
@@ -239,21 +217,19 @@ void pwd() {
         }
     }
 
-    if (positivo == 0) {
-
+    if (positivo == 0) 
+    {
             printf(" Diretorio nao encontrado.\n");
     }
     return;
  }
-
 void ls(char *parametro) {
-
+    
     if (parametro != NULL && strcmp(parametro, "-l") != 0) {
 
         printf("Digite 'ls' ou 'ls -l' para mostrar os arquivos deste diretorio.\n", parametro);
         return;
     }
-
     printf("Arquivos...\n");
 
     int i = 0;
@@ -266,9 +242,7 @@ void ls(char *parametro) {
 
                 printf("- %s\n", nome[i]);
             }
-
             else if (strcmp(parametro, "-l") == 0) {
-
                 printf("- %s %s %s\n", nome[i], data[i], hora[i]);
             }
         }
@@ -284,7 +258,6 @@ void debug() {
         printf(" [%i]: %i - [%i]: '%s' - [%i]: %s - [%i]: %s\n", i, parent[i], i, nome[i], i, data[i], i, hora[i]);
     }
 }
-
 int main() {
 
     int executei_comando = 0;
@@ -312,37 +285,31 @@ int main() {
             mkdir(parametro1);
             executei_comando = 1;
         }
-
         if (strcmp(comando,"cd") == 0) {
 
             cd(parametro1);
             executei_comando= 1;
         }
-
         if (strcmp(comando,"pwd") == 0) {
 
             pwd();
             executei_comando = 1;
         }
-
         if ( strcmp(comando,"ren") == 0 ) {
 
             ren(parametro1, parametro2);
             executei_comando = 1;
         }
-
         if ( strcmp(comando,"rmdir") == 0 ) {
 
             rmdir(parametro1);
             executei_comando = 1;
         }
-
         if (strcmp(comando,"ls") == 0) {
 
             ls(parametro1);
             executei_comando =1;
         }
-
         if(strcmp(comando, "time") == 0) {
 
             data_hora();
@@ -351,45 +318,38 @@ int main() {
             executei_comando=1;
 
         }
-
         if (strcmp(comando, "debug" ) == 0) {
 
             debug();
             executei_comando=1;
         }
-
         if (strcmp(comando, "clear" ) == 0) {
 
             system("cls");
             executei_comando=1;
         }
-
         if (strcmp(comando, "help") == 0) {
 
-            printf(" pwd - Exibe a posicao na estrutura de diretorios.");
-            printf("\n mkdir - Cria um diretorio.");
-            printf("\n cd - Chama o diretorio.");
-            printf("\n ren - Renomeia um diretorio.");
-            printf("\n copyright - Exibe o nome dos autores do programa.");
-            printf("\n poweroff - Sai do terminal.");
-            printf("\n time - Exbe data e horas atuais.");
-            printf("\n clear - Limpa a tela.\n");
+            printf(" pwd - Exibe a posicao na estrutura de diretorios\n");
+            printf("\n mkdir - Cria um diretorio\n");
+            printf("\n cd - Chama o diretorio\n");
+            printf("\n ren - Renomeia um diretorio\n");
+            printf("\n copyright - Exibe o nome dos autores do programa\n");
+            printf("\n poweroff - Sai do terminal\n");
+            printf("\n time - Exbe data e horas atuais\n");
+            printf("\n clear - Limpa a tela\n\n");
             executei_comando = 1;
         }
-
         if (strcmp(comando,"copyright") == 0) {
 
             printf("\n -Isaque Torres\n -Joao Aguirra\n -Mateus Santos\n -Rodrigo Ventura\n\n Copyright 2019-2019 - Sistemas operacionais I\n\n ");
             executei_comando = 1;
-
         }
-
         if (strcmp(comando,"poweroff") == 0) {
 
             printf("Encerrando a aplicacao.\n");
             executei_comando = 1;
         }
-
         if (executei_comando != 0) {
 
             executei_comando = 0;
@@ -413,7 +373,6 @@ int setting() {
         strcpy(data[i], "");
         strcpy(hora[i], "");
     }
-
     system("clear");
     main();
 
