@@ -14,4 +14,4 @@ user~# help
 ![alt text](http://www.fatec.edu.br/wp-content/themes/fatec/img/logo-colorido.png)
 
 
-Criador da base do código: <link>https://github.com/parklez<link/>
+Base do código elaborada por: <link>https://github.com/parklez<link/>
