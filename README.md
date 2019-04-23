@@ -2,10 +2,11 @@
 
 <code>user~# help</code>
 
-**pwd** - Exibe a posicao na estrutura de diretorios<br/>
-**mkdir** - Cria um diretorio<br/>
-**cd** - Chama o diretorio<br/>
-**ren** - Renomeia um diretorio<br/>
+**pwd** - Exibe a posicao na estrutura de diretórios<br/>
+**mkdir** - Cria um diretório<br/>
+**rmdir** - Exclui um diretório<br/>
+**cd** - Chama o diretório<br/>
+**ren** - Renomeia um diretório<br/>
 **copyright** - Exibe o nome dos autores do programa<br/>
 **poweroff** - Sai do terminal<br/>
 **cp** - Copia um arquivo de um diretório para outro<br/>
