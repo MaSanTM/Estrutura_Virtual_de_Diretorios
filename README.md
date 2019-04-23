@@ -7,7 +7,7 @@ user~# help
 **cd** - Chama o diretorio<br/>
 **ren** - Renomeia um diretorio<br/>
 **copyright** - Exibe o nome dos autores do programa<br/>
-**poweroff* - Sai do terminal<br/>
+**poweroff** - Sai do terminal<br/>
 **cp** - Copia um arquivo de um diretório para outro<br/>
 **clear** - Limpa a tela<br/>
 
