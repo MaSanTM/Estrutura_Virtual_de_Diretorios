@@ -11,4 +11,7 @@ poweroff - Sai do terminal<br/>
 cp - Copia um arquivo de um diretório para outro<br/>
 clear - Limpa a tela<br/>
 
+![alt text](http://url/to/img.png)
+
+
 Criador da base do código: <link>https://github.com/parklez<link/>
