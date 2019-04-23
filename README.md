@@ -11,4 +11,4 @@ poweroff - Sai do terminal<br/>
 cp - Copia um arquivo de um diretório para outro<br/>
 clear - Limpa a tela<br/>
 
-Colaboradores: <link>https://github.com/parklez<link/>
+Criador da base do código: <link>https://github.com/parklez<link/>
