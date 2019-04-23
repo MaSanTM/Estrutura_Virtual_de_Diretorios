@@ -2,7 +2,7 @@
 
 user~# help
 
-**pwd** - Exibe a posicao na estrutura de diretorios<br/>
+**pwd** - $0Exibe a posicao na estrutura de diretorios<br/>
 **mkdir** - Cria um diretorio<br/>
 **cd** - Chama o diretorio<br/>
 **ren** - Renomeia um diretorio<br/>
