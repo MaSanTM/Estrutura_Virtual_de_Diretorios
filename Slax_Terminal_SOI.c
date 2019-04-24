@@ -325,7 +325,7 @@ int main() {
         }
         if (strcmp(comando, "clear" ) == 0) {
 
-            system("cls");
+            system("clear");
             executei_comando=1;
         }
         if (strcmp(comando, "help") == 0) {
