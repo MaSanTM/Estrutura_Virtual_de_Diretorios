@@ -266,7 +266,7 @@ int main() {
 
     while (strcmp(comando,"poweroff") != 0) {
 
-        printf("> ");
+        printf("user~# ");
         gets(linha_de_comando);
 
         comando = strtok(linha_de_comando," ");
