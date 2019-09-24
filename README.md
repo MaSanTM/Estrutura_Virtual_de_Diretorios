@@ -1,6 +1,7 @@
 # Estrutura Virtual de Diretorios
-
-<code>user~# help</code>
+```console
+user~# help
+```
 
 **pwd** - Exibe a posição na estrutura de diretórios<br/>
 **mkdir** - Cria um diretório<br/>
