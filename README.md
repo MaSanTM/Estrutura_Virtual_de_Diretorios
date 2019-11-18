@@ -3,7 +3,9 @@
 user~# help
 ```
 
-**pwd** - Exibe a posição na estrutura de diretórios<br/>
+```c
+pwd - Exibe a posição na estrutura de diretórios<br/>
+```
 **mkdir** - Cria um diretório<br/>
 **rmdir** - Exclui um diretório<br/>
 **cd** - Chama o diretório<br/>
